@@ -1,0 +1,23 @@
+package eclipse;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver; 
+
+public class game {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/priyadarshinir/Downloads/chromedriver-3");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://centralpark-ritc.com/index.php");
+		//driver.findElement(By.linkText("Book Now")).click();
+		driver.findElement(By.xpath("//a[@onclick='select_court(20)']")).click();
+		//driver.findElement(By.className("wm_dt_sec")).click();
+		driver.findElement(By.xpath(".//*[@class='wm_dt_sec']//div[contains(.,'Tue')[1]]"));		
+		
+				
+				
+	}
+
+}
